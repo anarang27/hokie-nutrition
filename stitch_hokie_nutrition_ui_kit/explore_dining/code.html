@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hokie Nutrition - Explore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#d3e4fe",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#3f0016",
+                        "on-primary-container": "#ff9eb2",
+                        "primary-container": "#8b1f41",
+                        "surface-dim": "#e9d5d7",
+                        "surface-tint": "#a63455",
+                        "on-secondary-container": "#662d00",
+                        "surface-bright": "#fff8f7",
+                        "secondary-container": "#ff8934",
+                        "secondary-fixed": "#ffdbc8",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "tertiary-container": "#3b4b60",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#f8e3e5",
+                        "surface": "#fff8f7",
+                        "on-secondary-fixed-variant": "#743400",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#dcbfc3",
+                        "inverse-primary": "#ffb1c0",
+                        "outline": "#897175",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffecee",
+                        "tertiary": "#243449",
+                        "background": "#fff8f7",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-surface": "#24191b",
+                        "primary-fixed-dim": "#ffb1c0",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "primary-fixed": "#ffd9df",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#aabbd4",
+                        "surface-container-highest": "#f2dee0",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#f2dee0",
+                        "secondary": "#994700",
+                        "primary": "#6c012b",
+                        "on-secondary-fixed": "#321300",
+                        "on-background": "#24191b",
+                        "inverse-surface": "#3a2d2f",
+                        "surface-container": "#fee9eb",
+                        "surface-container-low": "#fff0f1",
+                        "on-surface-variant": "#564145",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#861b3e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "xl": "32px",
+                        "gutter": "12px",
+                        "container-margin": "16px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "30px", "fontWeight": "700"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-lg": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                        "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+        
+        /* Hide scrollbar for horizontal scrolling containers */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md antialiased min-h-screen flex flex-col pt-safe">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Hokie Nutrition</h1>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-3xl mx-auto mt-16 px-container-margin pb-32">
+<!-- Search Section -->
+<section class="mt-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface rounded-[16px] border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-lg text-body-lg text-on-surface placeholder:text-on-surface-variant shadow-[0_2px_8px_rgba(0,0,0,0.02)]" placeholder="Search dining halls, meals, macros..." type="text"/>
+</div>
+</section>
+<!-- Segmented Control -->
+<section class="mt-lg w-full bg-surface-variant p-1 rounded-xl flex shadow-inner">
+<button class="flex-1 py-2 font-label-lg text-label-lg rounded-lg text-on-surface-variant hover:bg-surface/50 transition-colors text-center">Nearby</button>
+<button class="flex-1 py-2 font-label-lg text-label-lg rounded-lg bg-surface text-on-surface shadow-[0_2px_4px_rgba(0,0,0,0.05)] text-center transition-all">All</button>
+<button class="flex-1 py-2 font-label-lg text-label-lg rounded-lg text-on-surface-variant hover:bg-surface/50 transition-colors text-center">Open Now</button>
+</section>
+<!-- Filter Chips (Horizontal Scroll) -->
+<section class="mt-md flex gap-sm overflow-x-auto hide-scrollbar pb-2 -mx-container-margin px-container-margin">
+<button class="shrink-0 h-9 px-4 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg flex items-center gap-2 border border-transparent">
+<span class="material-symbols-outlined text-[18px]">done</span> High Protein
+            </button>
+<button class="shrink-0 h-9 px-4 rounded-full bg-surface border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+                Under 600 Cal
+            </button>
+<button class="shrink-0 h-9 px-4 rounded-full bg-surface border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+                Vegetarian
+            </button>
+<button class="shrink-0 h-9 px-4 rounded-full bg-surface border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+                Low Carb
+            </button>
+</section>
+<!-- Dining Halls / Results Grid -->
+<section class="mt-xl">
+<div class="flex justify-between items-end mb-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Campus Dining</h2>
+<button class="text-primary font-label-lg text-label-lg hover:underline">View Map</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col hover:shadow-[0_8px_24px_rgba(108,1,43,0.1)] transition-shadow">
+<div class="h-32 w-full bg-surface-variant relative overflow-hidden">
+<img alt="Dining Hall Interior" class="w-full h-full object-cover" data-alt="A modern university dining hall interior with bright natural lighting, wooden tables, and students gathering. The aesthetic is clean, energetic, and contemporary, reflecting a lively campus atmosphere with subtle maroon and white accents throughout the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT4JDB3GTZyVDD3v7c-h21y0UYsIkopXviYpJwSe8jrLv08QjsryHGsdPI760pnB878hzUJQcFfaOKlq-5I4XaVoma3zh_g_DRjtQKK50PaqfEMO59IlcCABcLESiHkytp3QRe4wLjrD6X4JFSucpVJjDllzeCsuzFBQyZydAv8IIzlE2x_YhcYNq5Svc0a7KqD4S5P4FV9io_pkW_rv94Uzg4SVkPWPlG9lRf0O-IVJPgbnhKxwM8N16F6f8oZen4YGOD3_NTklyT"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="font-label-md text-label-md text-on-surface">Open</span>
+</div>
+</div>
+<div class="p-container-margin flex flex-col flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">West End Market</h3>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> 0.2 mi
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Various • Salads, Grill, Pasta</p>
+<div class="mt-auto">
+<div class="text-label-md font-label-md text-on-surface-variant mb-2">Top Macros Here:</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-[#fff0f1] text-[#a63455] rounded-full text-[11px] font-semibold tracking-wide uppercase">High Protein</span>
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full text-[11px] font-semibold tracking-wide uppercase">Low Fat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col hover:shadow-[0_8px_24px_rgba(108,1,43,0.1)] transition-shadow">
+<div class="h-32 w-full bg-surface-variant relative overflow-hidden">
+<img alt="Steak and Salad" class="w-full h-full object-cover" data-alt="A close-up shot of a healthy, high-protein meal featuring grilled steak strips over a vibrant green salad in a white bowl. The lighting is bright and appetizing, emphasizing the fresh textures and modern, clean-eating aesthetic aligned with a fitness-focused lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADG2651cgs_Tc9vKrd7iv5jG0oe3PROmGmLJybmlCrSotNGwQXpe4-pULolz3qqRKTpHHNzMfjI4WNBV76aLrmCQ5EPLD33LCYFAINQ_fDwUBXgIOTR22bnS7ePB53SJvNRrLEDtvPcP4Ik-1BFnf6LOSzlzVn_f53fhz1Sm0dB4gZNoKt37QNR0iIz_tzgrgXQKzEjnQ_1_UTVNHtA22dyTzAWuKs1C4FV0yNeakWRNuzDVsflt5uoylS9cRDhLREvsiREI2wYadP"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded-md flex items-center gap-1 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-red-500"></span>
+<span class="font-label-md text-label-md text-on-surface">Closed</span>
+</div>
+</div>
+<div class="p-container-margin flex flex-col flex-1 opacity-80">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Turner Place</h3>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> 0.5 mi
+                            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Steakhouse • Sushi • Bowls</p>
+<div class="mt-auto">
+<div class="text-label-md font-label-md text-on-surface-variant mb-2">Top Macros Here:</div>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-variant text-on-surface-variant rounded-full text-[11px] font-semibold tracking-wide uppercase">Balanced</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Meals Bento Box -->
+<section class="mt-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Trending Meals</h2>
+<div class="grid grid-cols-2 gap-sm">
+<!-- Bento 1 -->
+<div class="bg-surface rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">kebab_dining</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Grilled Chicken Bowl</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">Qdoba @ Turner</p>
+<div class="mt-auto flex justify-between items-center border-t border-outline-variant/30 pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">540 cal</span>
+<span class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded font-bold">42g P</span>
+</div>
+</div>
+<!-- Bento 2 -->
+<div class="bg-surface rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-surface-variant flex flex-col">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined">set_meal</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface mb-1">Salmon Salad</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">Leaf &amp; Ladle @ West End</p>
+<div class="mt-auto flex justify-between items-center border-t border-outline-variant/30 pt-2">
+<span class="font-body-md text-body-md font-semibold text-primary">420 cal</span>
+<span class="text-[10px] bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded font-bold">35g P</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface dark:bg-surface-container-low shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-xl md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-all duration-200">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-on-primary-container dark:text-on-primary-container rounded-2xl px-4 py-1 scale-95 transition-all duration-200">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-label-md text-label-md">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-all duration-200">
+<span class="material-symbols-outlined mb-1">bookmark</span>
+<span class="font-label-md text-label-md">Saved</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-all duration-200">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</button>
+</nav>
+<!-- Web Nav (Hidden on Mobile) -->
+<div class="hidden md:flex fixed top-0 right-0 h-16 items-center px-lg z-50 gap-lg">
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg">Home</button>
+<button class="text-primary font-label-lg text-label-lg border-b-2 border-primary">Explore</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg">Saved</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors font-label-lg text-label-lg">Profile</button>
+</div>
+</body></html>

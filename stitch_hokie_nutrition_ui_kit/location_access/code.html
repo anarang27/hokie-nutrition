@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Location Permission - Hokie Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#d3e4fe",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#3f0016",
+                      "on-primary-container": "#ff9eb2",
+                      "primary-container": "#8b1f41",
+                      "surface-dim": "#e9d5d7",
+                      "surface-tint": "#a63455",
+                      "on-secondary-container": "#662d00",
+                      "surface-bright": "#fff8f7",
+                      "secondary-container": "#ff8934",
+                      "secondary-fixed": "#ffdbc8",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "tertiary-container": "#3b4b60",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#f8e3e5",
+                      "surface": "#fff8f7",
+                      "on-secondary-fixed-variant": "#743400",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#dcbfc3",
+                      "inverse-primary": "#ffb1c0",
+                      "outline": "#897175",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#ffecee",
+                      "tertiary": "#243449",
+                      "background": "#fff8f7",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-surface": "#24191b",
+                      "primary-fixed-dim": "#ffb1c0",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "primary-fixed": "#ffd9df",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#aabbd4",
+                      "surface-container-highest": "#f2dee0",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#f2dee0",
+                      "secondary": "#994700",
+                      "primary": "#6c012b",
+                      "on-secondary-fixed": "#321300",
+                      "on-background": "#24191b",
+                      "inverse-surface": "#3a2d2f",
+                      "surface-container": "#fee9eb",
+                      "surface-container-low": "#fff0f1",
+                      "on-surface-variant": "#564145",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#861b3e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1rem"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xl": "32px",
+                      "gutter": "12px",
+                      "container-margin": "16px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "30px", "fontWeight": "700"}],
+                      "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-lg": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                      "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        .campus-pattern {
+            background-image: radial-gradient(var(--tw-colors-outline-variant) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background h-screen w-screen overflow-hidden flex flex-col antialiased">
+<!-- Top Navigation - Linear intent implies close/skip -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md">
+<button aria-label="Close" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined font-headline-md">close</span>
+</button>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Hokie Nutrition</span>
+<div class="w-10 h-10"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col pt-16 pb-safe px-container-margin relative w-full h-full">
+<!-- Illustration Area (Campus Map Inspired) -->
+<div class="flex-1 w-full relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 campus-pattern opacity-50 z-0"></div>
+<!-- Map Pin Illustration Container -->
+<div class="relative z-10 w-full max-w-sm aspect-square flex items-center justify-center">
+<!-- Pulse effect behind pin -->
+<div class="absolute w-32 h-32 rounded-full bg-primary-container/30 animate-ping opacity-75"></div>
+<div class="absolute w-48 h-48 rounded-full bg-surface-variant/40 animate-pulse delay-150"></div>
+<!-- Main Pin -->
+<div class="relative bg-surface rounded-3xl p-6 shadow-[0_8px_24px_rgba(108,1,43,0.1)] border border-surface-variant flex flex-col items-center">
+<div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-4 shadow-[0_4px_12px_rgba(108,1,43,0.3)]">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<!-- Contextual UI Elements floating around pin -->
+<div class="absolute -top-4 -right-2 bg-surface px-3 py-2 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">restaurant</span>
+<span class="font-label-lg text-label-lg text-on-surface">D2 Dining</span>
+</div>
+<div class="absolute -bottom-2 -left-4 bg-surface px-3 py-2 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] border border-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">coffee</span>
+<span class="font-label-lg text-label-lg text-on-surface">Turner Place</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Text and Actions Area -->
+<div class="w-full max-w-md mx-auto flex flex-col gap-xl pb-10 z-20">
+<div class="text-center flex flex-col gap-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">
+                    Find Food Faster
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[280px] mx-auto">
+                    We use your location to show you the closest VT dining halls and accurate nutrition menus.
+                </p>
+</div>
+<div class="flex flex-col gap-md w-full">
+<!-- Primary Button -->
+<button class="w-full h-[54px] bg-primary text-on-primary font-headline-md text-headline-md rounded-2xl flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(108,1,43,0.15)] active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-xl">my_location</span>
+                    Enable Location
+                </button>
+<!-- Secondary / Ghost Button -->
+<button class="w-full h-[54px] bg-transparent text-secondary font-headline-md text-headline-md rounded-2xl flex items-center justify-center border-2 border-secondary/20 active:bg-surface-variant/50 transition-colors">
+                    Select Dining Hall Manually
+                </button>
+</div>
+</div>
+</main>
+</body></html>

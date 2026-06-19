@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Hokie Nutrition - Menu Item Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#d3e4fe",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#3f0016",
+                      "on-primary-container": "#ff9eb2",
+                      "primary-container": "#8b1f41",
+                      "surface-dim": "#e9d5d7",
+                      "surface-tint": "#a63455",
+                      "on-secondary-container": "#662d00",
+                      "surface-bright": "#fff8f7",
+                      "secondary-container": "#ff8934",
+                      "secondary-fixed": "#ffdbc8",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "tertiary-container": "#3b4b60",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#f8e3e5",
+                      "surface": "#fff8f7",
+                      "on-secondary-fixed-variant": "#743400",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#dcbfc3",
+                      "inverse-primary": "#ffb1c0",
+                      "outline": "#897175",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#ffecee",
+                      "tertiary": "#243449",
+                      "background": "#fff8f7",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-surface": "#24191b",
+                      "primary-fixed-dim": "#ffb1c0",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "primary-fixed": "#ffd9df",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#aabbd4",
+                      "surface-container-highest": "#f2dee0",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#f2dee0",
+                      "secondary": "#994700",
+                      "primary": "#6c012b",
+                      "on-secondary-fixed": "#321300",
+                      "on-background": "#24191b",
+                      "inverse-surface": "#3a2d2f",
+                      "surface-container": "#fee9eb",
+                      "surface-container-low": "#fff0f1",
+                      "on-surface-variant": "#564145",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#861b3e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xl": "32px",
+                      "gutter": "12px",
+                      "container-margin": "16px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "17px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "30px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "34px",
+                              {
+                                      "lineHeight": "41px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24 md:pb-0 font-body-lg">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Hokie Nutrition</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</header>
+<main class="pt-16 pb-24 max-w-3xl mx-auto px-container-margin">
+<!-- Hero Image Section -->
+<section class="mt-md -mx-container-margin md:mx-0 md:rounded-xl overflow-hidden relative shadow-[0_4px_20px_rgba(0,0,0,0.04)] h-64 md:h-80">
+<img alt="London Broil" class="w-full h-full object-cover" data-alt="A high-quality, appetizing, close-up photograph of London Broil steak, perfectly cooked medium-rare, sliced and arranged elegantly on a clean white plate. The lighting is bright and natural, casting soft ambient shadows, characteristic of a high-end food magazine in a bright, modern collegiate setting. Accent colors include subtle burnt orange elements in the background, reinforcing a dynamic, energetic fitness edge. The mood is fresh, healthy, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBexpcX20Jf8VpmWB4wHov-LRTkeMiL_EToQzTOU-4TOVtntLT_D_dzVcFyBBXvSCavCCKNBUqsn_p_jl4qQUZtAxcdIeys0tREdUzTp4MYlNGBh3sEK6de8gqidm0MmP1sNTT9KurBFvVRO-_Khe6OA6_K_yicIEd9e5o56KpIXKe_iOJ5ZxbKAdRQVIWq5EcQdv8ew6i5GOO56mqxK9DrUx23-D59B9fGf9n8sNSMNQHt7VseTmFDi2v_Pe9oB7o-8dyfZ1YkpFjZ"/>
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-md pt-xl flex justify-between items-end">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-md text-label-md text-on-primary opacity-90 uppercase tracking-wider">West End Market</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-primary">London Broil</h2>
+</div>
+<button class="w-12 h-12 bg-surface/20 backdrop-blur-md rounded-full flex items-center justify-center text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-lg">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</section>
+<!-- Nutrition Summary Cards -->
+<section class="mt-lg grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center">
+<span class="font-label-md text-label-md text-on-surface-variant mb-xs">Calories</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">320</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-xs">kcal</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center border-b-4 border-primary">
+<span class="font-label-md text-label-md text-on-surface-variant mb-xs">Protein</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">36g</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center border-b-4 border-secondary-container">
+<span class="font-label-md text-label-md text-on-surface-variant mb-xs">Carbs</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">2g</span>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center border-b-4 border-tertiary-container">
+<span class="font-label-md text-label-md text-on-surface-variant mb-xs">Fat</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">18g</span>
+</div>
+</section>
+<!-- Goal Alignment Tip -->
+<section class="mt-lg bg-primary-container/20 p-md rounded-xl border border-primary-container/30 flex gap-md items-start shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-primary mb-xs">Why it fits your goal</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Excellent source of lean protein. Fits perfectly into your high-protein, low-carb macro target for post-workout recovery.</p>
+</div>
+</section>
+<!-- Details List -->
+<section class="mt-xl bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] overflow-hidden">
+<div class="p-md border-b border-surface-variant flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Ingredients</h3>
+</div>
+<div class="p-md font-body-md text-body-md text-on-surface-variant">
+                Beef (Top Round), Olive Oil, Soy Sauce, Balsamic Vinegar, Garlic, Black Pepper, Rosemary.
+            </div>
+<div class="p-md border-t border-surface-variant bg-surface-container-low flex justify-between items-center">
+<h3 class="font-label-lg text-label-lg text-on-surface">Allergens</h3>
+<div class="flex gap-sm">
+<span class="px-sm py-xs bg-error-container text-on-error-container rounded-full font-label-md text-label-md">Soy</span>
+</div>
+</div>
+</section>
+<!-- Action Area -->
+<section class="mt-xl fixed bottom-0 left-0 w-full md:relative md:bg-transparent bg-surface-container-lowest p-md pb-safe border-t border-surface-variant md:border-none shadow-[0_-8px_24px_rgba(0,0,0,0.08)] md:shadow-none z-40">
+<div class="max-w-3xl mx-auto flex gap-md">
+<button class="flex-1 bg-surface border border-secondary text-secondary font-label-lg text-label-lg h-[54px] rounded-xl flex items-center justify-center gap-sm hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+                    Log Portion
+                </button>
+<button class="flex-1 bg-primary text-on-primary font-label-lg text-label-lg h-[54px] rounded-xl flex items-center justify-center gap-sm shadow-[0_8px_24px_rgba(108,1,43,0.2)] hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ramen_dining</span>
+                    Add to Bowl
+                </button>
+</div>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hokie Nutrition - Bowl Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#d3e4fe",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#3f0016",
+                      "on-primary-container": "#ff9eb2",
+                      "primary-container": "#8b1f41",
+                      "surface-dim": "#e9d5d7",
+                      "surface-tint": "#a63455",
+                      "on-secondary-container": "#662d00",
+                      "surface-bright": "#fff8f7",
+                      "secondary-container": "#ff8934",
+                      "secondary-fixed": "#ffdbc8",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "tertiary-container": "#3b4b60",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#f8e3e5",
+                      "surface": "#fff8f7",
+                      "on-secondary-fixed-variant": "#743400",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#dcbfc3",
+                      "inverse-primary": "#ffb1c0",
+                      "outline": "#897175",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#ffecee",
+                      "tertiary": "#243449",
+                      "background": "#fff8f7",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-surface": "#24191b",
+                      "primary-fixed-dim": "#ffb1c0",
+                      "secondary-fixed-dim": "#ffb68b",
+                      "primary-fixed": "#ffd9df",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#aabbd4",
+                      "surface-container-highest": "#f2dee0",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#f2dee0",
+                      "secondary": "#994700",
+                      "primary": "#6c012b",
+                      "on-secondary-fixed": "#321300",
+                      "on-background": "#24191b",
+                      "inverse-surface": "#3a2d2f",
+                      "surface-container": "#fee9eb",
+                      "surface-container-low": "#fff0f1",
+                      "on-surface-variant": "#564145",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#861b3e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "xl": "32px",
+                      "gutter": "12px",
+                      "container-margin": "16px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "30px", "fontWeight": "700"}],
+                      "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-lg": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                      "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- TopAppBar (Transactional - No Bottom Nav) -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md bg-background dark:bg-background">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-full text-primary dark:text-primary-fixed-dim hover:opacity-80 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim">Hokie Nutrition</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 pt-16 pb-[100px]">
+<!-- Sticky Macro Live Header -->
+<div class="sticky top-16 z-40 bg-background/95 backdrop-blur-md px-container-margin py-md border-b border-surface-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<div class="flex justify-between items-end mb-sm">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Current Bowl</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-display-lg text-display-lg text-primary">420</span>
+<span class="font-body-md text-body-md text-on-surface-variant">kcal</span>
+</div>
+</div>
+<div class="flex gap-sm">
+<!-- Macro Chips -->
+<div class="flex flex-col items-center bg-primary-fixed text-on-primary-fixed px-sm py-xs rounded-lg">
+<span class="font-label-md text-label-md">32g</span>
+<span class="font-label-md text-label-md opacity-80 text-[10px]">PRO</span>
+</div>
+<div class="flex flex-col items-center bg-secondary-fixed text-on-secondary-fixed-variant px-sm py-xs rounded-lg">
+<span class="font-label-md text-label-md">45g</span>
+<span class="font-label-md text-label-md opacity-80 text-[10px]">CARB</span>
+</div>
+<div class="flex flex-col items-center bg-surface-container-high text-on-surface px-sm py-xs rounded-lg">
+<span class="font-label-md text-label-md">12g</span>
+<span class="font-label-md text-label-md opacity-80 text-[10px]">FAT</span>
+</div>
+</div>
+</div>
+<!-- Step Indicator -->
+<div class="flex items-center gap-sm mt-md">
+<div class="flex-1 h-1.5 rounded-full bg-primary relative overflow-hidden"></div>
+<div class="flex-1 h-1.5 rounded-full bg-secondary-container relative overflow-hidden"></div>
+<div class="flex-1 h-1.5 rounded-full bg-surface-variant relative overflow-hidden"></div>
+</div>
+<div class="flex justify-between mt-xs px-xs">
+<span class="font-label-md text-label-md text-primary">Base</span>
+<span class="font-label-md text-label-md text-secondary-container">Protein</span>
+<span class="font-label-md text-label-md text-on-surface-variant opacity-50">Toppings</span>
+</div>
+</div>
+<div class="px-container-margin py-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background mb-sm">Choose Proteins</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Select up to 2 proteins for your macro goals.</p>
+<!-- Grid Selection -->
+<div class="grid grid-cols-2 gap-gutter">
+<!-- Active Card -->
+<button class="relative flex flex-col text-left bg-surface-container-lowest border-2 border-secondary-container rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(153,71,0,0.08)] transition-transform active:scale-95 group">
+<div class="absolute top-sm right-sm z-10 w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="h-24 w-full bg-surface-variant relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-0"></div>
+<img alt="Grilled chicken breast" class="w-full h-full object-cover" data-alt="A top-down, high-quality, brightly lit macro shot of perfectly grilled chicken breast slices on a pristine white ceramic plate. The lighting is soft and natural, emphasizing the char marks and juicy texture of the meat, fitting a modern, clean fitness app aesthetic. The color palette focuses on warm golden browns of the chicken against stark white, conveying lean protein and healthy eating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYHAaxBQvc1RO_Sx6aqN0604zdR4hTbO_HDh4xhfeDRNONOdvUxraLByQkIqXckBvxe_DHLobNy32c2RN-KW6XGvkPph7pqZRtJmN6Iv37tE7rIpTL87zZiGQo9Wm9UD1mGHgMCBsacrmt635a7avNORzh-RfI8JrUPicbDTrMeiUF7U4IpGxR_Tkxj-8eawzwnoCWDsqwAhI_sngmin9EbjbNi8up5jodMi3alDLfK7P2CdGmcIBPnr_KsT6BZczz5gRwA2dphrY"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<h3 class="font-label-lg text-label-lg text-on-background mb-xs">Grilled Chicken</h3>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">120 kcal</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-1.5 py-0.5 rounded">24g P</span>
+</div>
+</div>
+</button>
+<!-- Inactive Card 1 -->
+<button class="relative flex flex-col text-left bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-transform active:scale-95 group">
+<div class="absolute top-sm right-sm z-10 w-6 h-6 rounded-full border-2 border-outline-variant bg-surface/50 backdrop-blur-sm text-transparent flex items-center justify-center group-hover:border-outline">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<div class="h-24 w-full bg-surface-variant relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-0"></div>
+<img alt="Spicy Tofu Cubes" class="w-full h-full object-cover" data-alt="Crispy, golden-brown baked tofu cubes arranged neatly on a clean, light-colored wooden board. Shot from a slightly elevated angle with bright, diffused daylight casting soft shadows, highlighting the textured surface of the tofu. The scene is minimalist and appetizing, utilizing a color scheme of warm yellows and earthy wood tones to represent a clean, plant-based protein option in a modern UI context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeN7Z-FZ6q-nq-sbjIQb78vz6KgTQOZ_PYPDkPf5C-pQ_rBiEbl0tuEdv1j3U60u99QdzdVKndPPnOOe4vtB7LSVZoKvzTJtGbfIYLT4yvuUhNCci0-kZ-ySnQPJJTaJlXuXbOTRtThQh-Tt9LPi-lhzX8X_4U470-mNs1E8gNNecvpQY3pWxHuaDgWWZwV92BdNCZHBixAzeydyBB_BRAXlUAZVuNGlcvySjzwwl7yeKTWC2QTAvHuZLDbld3_zdFOc2xCW-4vGQx"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<h3 class="font-label-lg text-label-lg text-on-background mb-xs">Crispy Tofu</h3>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">160 kcal</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-1.5 py-0.5 rounded">14g P</span>
+</div>
+</div>
+</button>
+<!-- Inactive Card 2 -->
+<button class="relative flex flex-col text-left bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-transform active:scale-95 group">
+<div class="absolute top-sm right-sm z-10 w-6 h-6 rounded-full border-2 border-outline-variant bg-surface/50 backdrop-blur-sm text-transparent flex items-center justify-center group-hover:border-outline">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<div class="h-24 w-full bg-surface-variant relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-0"></div>
+<img alt="Steak strips" class="w-full h-full object-cover" data-alt="Thinly sliced, perfectly seared flank steak strips resting on a sleek, slate-grey surface. The image uses dramatic, high-contrast studio lighting to emphasize the juiciness and rich, deep red and brown tones of the meat. The composition is tight and modern, conveying a premium, high-protein fitness meal ingredient within a stark, clean environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ku5wu1UBYFIh1Dy8631B0LhiKC6lFXWs41BPax1FZQ0Ftk6YKqJ3RmYXUGyUgsiGyTxDWY0mkzG24LXsQIn_usvfU8uJFfFPZEx5u5aceNprZjHuc_Swe-r7RFFZzPa67UMwNgosV2RAnPtcB0YAUpR6n1vZiF-CsBOygPyHMCgsL7YnvfMvw2XQNQ5I1TuGjIN3VpRMxRGS5nuikiWi83V7Y8JdtZ7Di6fNb0AD_LY0CH7PkFxq4dXZ95tfdhdY3uVYur736VCb"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<h3 class="font-label-lg text-label-lg text-on-background mb-xs">Lean Steak</h3>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">190 kcal</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-1.5 py-0.5 rounded">22g P</span>
+</div>
+</div>
+</button>
+<!-- Inactive Card 3 -->
+<button class="relative flex flex-col text-left bg-surface-container-lowest border border-surface-variant rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-transform active:scale-95 group">
+<div class="absolute top-sm right-sm z-10 w-6 h-6 rounded-full border-2 border-outline-variant bg-surface/50 backdrop-blur-sm text-transparent flex items-center justify-center group-hover:border-outline">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+</div>
+<div class="h-24 w-full bg-surface-variant relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-0"></div>
+<img alt="Salmon fillet" class="w-full h-full object-cover" data-alt="A vibrant, fresh fillet of roasted salmon with a light glaze, positioned on clean, white parchment paper. The lighting is extremely bright and clean, creating a light-mode aesthetic that highlights the rich pinkish-orange hue of the fish and its flaky texture. The visual style is highly appetizing, focusing purely on the nutritional quality of the food without distracting background elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKyiXzpmpNe4McuuMYGsjXgenyojhS-6qWJfV0HHzKY4W_hna41k5ND08tw-sxq7VFhnYj8_LALuJeKpPLDlZUs9y9tYJeLcXbtTI6gfkxicqwmSoYadjx754F-bQ79cA3r9I7Wd9ESL9Voi5HpmKclOWKfaXFnteEGDMin_Lg-4eJyiubjd8jBcoWTLHzvgn19voif48GeX1TA5qtLiLYdVL3a-scRBAbp3MM29Nk5TSkL7lAch621zrurViP_fCoa37xW9BfUUG6"/>
+</div>
+<div class="p-sm flex flex-col flex-1">
+<h3 class="font-label-lg text-label-lg text-on-background mb-xs">Roasted Salmon</h3>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">175 kcal</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-1.5 py-0.5 rounded">18g P</span>
+</div>
+</div>
+</button>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-surface-variant p-container-margin pb-[calc(16px+env(safe-area-inset-bottom))] z-50">
+<button class="w-full h-[54px] bg-primary text-on-primary rounded-xl font-headline-md text-headline-md shadow-[0_8px_24px_rgba(108,1,43,0.15)] flex items-center justify-center gap-sm active:scale-95 transition-transform">
+<span>Next: Toppings</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</body></html>
