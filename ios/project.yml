@@ -1,0 +1,42 @@
+name: HokieNutrition
+options:
+  bundleIdPrefix: edu.vt
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+settings:
+  SWIFT_VERSION: "5.9"
+targets:
+  HokieNutrition:
+    type: application
+    platform: iOS
+    sources:
+      - path: HokieNutrition
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: edu.vt.hokienutrition
+      GENERATE_INFOPLIST_FILE: YES
+      INFOPLIST_KEY_CFBundleDisplayName: Hokie Nutrition
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "Hokie Nutrition uses your location to find nearby Virginia Tech dining halls."
+      TARGETED_DEVICE_FAMILY: "1"
+      DEVELOPMENT_TEAM: ""
+  HokieNutritionTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: HokieNutritionTests
+    dependencies:
+      - target: HokieNutrition
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: edu.vt.hokienutrition.tests
+      GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  HokieNutrition:
+    build:
+      targets:
+        HokieNutrition: all
+    test:
+      targets:
+        - HokieNutritionTests

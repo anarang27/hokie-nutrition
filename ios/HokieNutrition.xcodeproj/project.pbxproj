@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0814CD7B0E91C474885AA7DE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730E199CDD18119EB4F53A5 /* Models.swift */; };
+		128A8B59E7851EA7582C3879 /* LocationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D2416876F742F8CBEF6B5 /* LocationPermissionView.swift */; };
+		19BC32408BB3B6A115047482 /* HokieTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1B1689122A88D661036871 /* HokieTheme.swift */; };
+		22E1FEF58CA1A9CECF06E79E /* HokieNutritionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */; };
+		2A75EB300288C4A7AF2F163F /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */; };
+		38EC6F2C5EF446AB599B4662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4829D9D0E989B692E6BAB840 /* AppState.swift */; };
+		548B79BD39997FED376C6841 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848496BF5693FEB62EEDAC68 /* HomeView.swift */; };
+		63C2A94FC251AB19B1215295 /* HokieNutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19BD4FFD409EEDDFA8318C5 /* HokieNutritionTests.swift */; };
+		841298D0965CD02B57D21C63 /* NutritionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */; };
+		93C668E7A0E75474EF657BB7 /* OnboardingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */; };
+		9D1E98DC58CB7539A3E7D9E5 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F5F753EB8ED39906CF1B1 /* ExploreView.swift */; };
+		B555B1E93D4EB495C4FB5666 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E41AF674EB955F34D4507 /* MealDetailView.swift */; };
+		BA0C97E4B307DDFDD47CB62A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BC8545321937260CC3F5A /* MainTabView.swift */; };
+		C4C96E215712BB82DB6B3A7E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F229BBD6FCBB2755411912 /* ProfileView.swift */; };
+		D68C64777B41846AACE9F40B /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B6239980165DCBE630949 /* OnboardingFlowView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DD4FCF86F894C7570A0066E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6520035C56ED44B16E11062F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4005AADB6996B9172CE2CC3;
+			remoteInfo = HokieNutrition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011B6239980165DCBE630949 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		043D2416876F742F8CBEF6B5 /* LocationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionView.swift; sourceTree = "<group>"; };
+		06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationEngine.swift; sourceTree = "<group>"; };
+		2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieNutritionApp.swift; sourceTree = "<group>"; };
+		253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionCalculator.swift; sourceTree = "<group>"; };
+		2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAccountView.swift; sourceTree = "<group>"; };
+		385E41AF674EB955F34D4507 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		38D7B81AC551DBC8BA12AA77 /* HokieNutritionTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HokieNutritionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F229BBD6FCBB2755411912 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4829D9D0E989B692E6BAB840 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6730E199CDD18119EB4F53A5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6E7BC8545321937260CC3F5A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		848496BF5693FEB62EEDAC68 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8A2F5F753EB8ED39906CF1B1 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		C19BD4FFD409EEDDFA8318C5 /* HokieNutritionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieNutritionTests.swift; sourceTree = "<group>"; };
+		CF450D9A734755F6E868129B /* HokieNutrition.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HokieNutrition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1B1689122A88D661036871 /* HokieTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieTheme.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0CFA7EA908597FE121DACDD7 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				FB1B1689122A88D661036871 /* HokieTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		0E5E7A046945D7096D4920D8 /* HokieNutritionTests */ = {
+			isa = PBXGroup;
+			children = (
+				C19BD4FFD409EEDDFA8318C5 /* HokieNutritionTests.swift */,
+			);
+			path = HokieNutritionTests;
+			sourceTree = "<group>";
+		};
+		1E638BA46299E7A4FEC450DA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				848496BF5693FEB62EEDAC68 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3C2525C89C593C80D0E449C0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4829D9D0E989B692E6BAB840 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5730EF222D5DE6DBF3F9B553 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				385E41AF674EB955F34D4507 /* MealDetailView.swift */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		693523F88140306E6F7E9C99 = {
+			isa = PBXGroup;
+			children = (
+				BD63A743BC08ED1979F1487D /* HokieNutrition */,
+				0E5E7A046945D7096D4920D8 /* HokieNutritionTests */,
+				8D2D4C71E1F9E2098EC04C76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D2D4C71E1F9E2098EC04C76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF450D9A734755F6E868129B /* HokieNutrition.app */,
+				38D7B81AC551DBC8BA12AA77 /* HokieNutritionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93339896067696F6D80B891E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */,
+				06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		95C13CB155B6E87E69051BED /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				043D2416876F742F8CBEF6B5 /* LocationPermissionView.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		B25D7481761F8ABE092A599E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				42F229BBD6FCBB2755411912 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BB6CE49053D03E04DCEEAAF1 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				8A2F5F753EB8ED39906CF1B1 /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		BD63A743BC08ED1979F1487D /* HokieNutrition */ = {
+			isa = PBXGroup;
+			children = (
+				2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */,
+				3C2525C89C593C80D0E449C0 /* App */,
+				DA5714F2A4DEC9B9C0F49DE8 /* Models */,
+				93339896067696F6D80B891E /* Services */,
+				0CFA7EA908597FE121DACDD7 /* Theme */,
+				C9140F2A45B814F2ACF04955 /* Views */,
+			);
+			path = HokieNutrition;
+			sourceTree = "<group>";
+		};
+		C9140F2A45B814F2ACF04955 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E7BC8545321937260CC3F5A /* MainTabView.swift */,
+				BB6CE49053D03E04DCEEAAF1 /* Explore */,
+				1E638BA46299E7A4FEC450DA /* Home */,
+				95C13CB155B6E87E69051BED /* Location */,
+				5730EF222D5DE6DBF3F9B553 /* Meal */,
+				D9EBF6BECECD6171A64499C3 /* Onboarding */,
+				B25D7481761F8ABE092A599E /* Profile */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9EBF6BECECD6171A64499C3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */,
+				011B6239980165DCBE630949 /* OnboardingFlowView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DA5714F2A4DEC9B9C0F49DE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6730E199CDD18119EB4F53A5 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9DCC3A058E86A4F56E41F9B /* HokieNutritionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD86A0051A71DB96CC426CEE /* Build configuration list for PBXNativeTarget "HokieNutritionTests" */;
+			buildPhases = (
+				751CFD42A7C2971E5511760A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184A5C703E2E29145CB23543 /* PBXTargetDependency */,
+			);
+			name = HokieNutritionTests;
+			packageProductDependencies = (
+			);
+			productName = HokieNutritionTests;
+			productReference = 38D7B81AC551DBC8BA12AA77 /* HokieNutritionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4005AADB6996B9172CE2CC3 /* HokieNutrition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF12BAD4C5AD58A5C41A4348 /* Build configuration list for PBXNativeTarget "HokieNutrition" */;
+			buildPhases = (
+				3C51B5A4F909C5D1D9D77741 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HokieNutrition;
+			packageProductDependencies = (
+			);
+			productName = HokieNutrition;
+			productReference = CF450D9A734755F6E868129B /* HokieNutrition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6520035C56ED44B16E11062F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D4005AADB6996B9172CE2CC3 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = BD839FCDAEAA4DE573C9751A /* Build configuration list for PBXProject "HokieNutrition" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 693523F88140306E6F7E9C99;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8D2D4C71E1F9E2098EC04C76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4005AADB6996B9172CE2CC3 /* HokieNutrition */,
+				C9DCC3A058E86A4F56E41F9B /* HokieNutritionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C51B5A4F909C5D1D9D77741 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38EC6F2C5EF446AB599B4662 /* AppState.swift in Sources */,
+				9D1E98DC58CB7539A3E7D9E5 /* ExploreView.swift in Sources */,
+				22E1FEF58CA1A9CECF06E79E /* HokieNutritionApp.swift in Sources */,
+				19BC32408BB3B6A115047482 /* HokieTheme.swift in Sources */,
+				548B79BD39997FED376C6841 /* HomeView.swift in Sources */,
+				128A8B59E7851EA7582C3879 /* LocationPermissionView.swift in Sources */,
+				BA0C97E4B307DDFDD47CB62A /* MainTabView.swift in Sources */,
+				B555B1E93D4EB495C4FB5666 /* MealDetailView.swift in Sources */,
+				0814CD7B0E91C474885AA7DE /* Models.swift in Sources */,
+				841298D0965CD02B57D21C63 /* NutritionCalculator.swift in Sources */,
+				93C668E7A0E75474EF657BB7 /* OnboardingAccountView.swift in Sources */,
+				D68C64777B41846AACE9F40B /* OnboardingFlowView.swift in Sources */,
+				C4C96E215712BB82DB6B3A7E /* ProfileView.swift in Sources */,
+				2A75EB300288C4A7AF2F163F /* RecommendationEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751CFD42A7C2971E5511760A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C2A94FC251AB19B1215295 /* HokieNutritionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184A5C703E2E29145CB23543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4005AADB6996B9172CE2CC3 /* HokieNutrition */;
+			targetProxy = 2DD4FCF86F894C7570A0066E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01C2E2594C2967F06CE95182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vt.hokienutrition.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HokieNutrition.app/HokieNutrition";
+			};
+			name = Debug;
+		};
+		6B613C8BDB3BB22C16D6BC05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		6C60EC44FFC4376687CFEA19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		AD012E1813BCF6A6376B1218 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vt.hokienutrition.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HokieNutrition.app/HokieNutrition";
+			};
+			name = Release;
+		};
+		C36AD0572555359FE079EEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hokie Nutrition";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hokie Nutrition uses your location to find nearby Virginia Tech dining halls.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vt.hokienutrition;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E5D85611C2650256886CD395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Hokie Nutrition";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Hokie Nutrition uses your location to find nearby Virginia Tech dining halls.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = edu.vt.hokienutrition;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD839FCDAEAA4DE573C9751A /* Build configuration list for PBXProject "HokieNutrition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C60EC44FFC4376687CFEA19 /* Debug */,
+				6B613C8BDB3BB22C16D6BC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DD86A0051A71DB96CC426CEE /* Build configuration list for PBXNativeTarget "HokieNutritionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C2E2594C2967F06CE95182 /* Debug */,
+				AD012E1813BCF6A6376B1218 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF12BAD4C5AD58A5C41A4348 /* Build configuration list for PBXNativeTarget "HokieNutrition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5D85611C2650256886CD395 /* Debug */,
+				C36AD0572555359FE079EEFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6520035C56ED44B16E11062F /* Project object */;
+}

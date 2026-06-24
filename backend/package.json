@@ -1,0 +1,20 @@
+{
+  "name": "hokie-nutrition-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx scraper/src/index.ts",
+    "scrape:dry": "tsx scraper/src/index.ts --dry-run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
