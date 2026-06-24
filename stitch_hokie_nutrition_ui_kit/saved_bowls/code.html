@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Saved Bowls - Hokie Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#d3e4fe",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#3f0016",
+                        "on-primary-container": "#ff9eb2",
+                        "primary-container": "#8b1f41",
+                        "surface-dim": "#e9d5d7",
+                        "surface-tint": "#a63455",
+                        "on-secondary-container": "#662d00",
+                        "surface-bright": "#fff8f7",
+                        "secondary-container": "#ff8934",
+                        "secondary-fixed": "#ffdbc8",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "tertiary-container": "#3b4b60",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#f8e3e5",
+                        "surface": "#fff8f7",
+                        "on-secondary-fixed-variant": "#743400",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#dcbfc3",
+                        "inverse-primary": "#ffb1c0",
+                        "outline": "#897175",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ffecee",
+                        "tertiary": "#243449",
+                        "background": "#fff8f7",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-surface": "#24191b",
+                        "primary-fixed-dim": "#ffb1c0",
+                        "secondary-fixed-dim": "#ffb68b",
+                        "primary-fixed": "#ffd9df",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#aabbd4",
+                        "surface-container-highest": "#f2dee0",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#f2dee0",
+                        "secondary": "#994700",
+                        "primary": "#6c012b",
+                        "on-secondary-fixed": "#321300",
+                        "on-background": "#24191b",
+                        "inverse-surface": "#3a2d2f",
+                        "surface-container": "#fee9eb",
+                        "surface-container-low": "#fff0f1",
+                        "on-surface-variant": "#564145",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#861b3e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "lg": "24px",
+                        "xl": "32px",
+                        "gutter": "12px",
+                        "container-margin": "16px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "base": "4px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "30px", "fontWeight": "700"}],
+                        "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-lg": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                        "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .ambient-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+        .active-shadow { box-shadow: 0 8px 24px rgba(108,1,43,0.1); }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 20px); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg overflow-x-hidden min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="flex items-center gap-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Hokie Nutrition</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant flex-shrink-0">
+<img alt="User profile photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKK2tB-VcXSv7DyyhO84AOJd_MT60zpqthjwJbgh8rcH3oOardRcV0ChSeZ2iK_c4jdVYeR4tdwyV1GvkwLwp51RHqLFCYKh8ChGTgbwGF6qWBDhwuHSU9zKmYbuOXEATcwBSTd9EIF2HJ_IOfEh4ublFQdEXf0weaLyvDbTQ-A5Rmd7rYLpsyp9dj1v2v4W3aKoqX2n7hLyrpUGrB17wvwoP-S6bFVMWPocSm94nRlatjlbhzYAdFtH1d9ArxmnzOVWyVhv_mrDrp"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 px-container-margin md:px-xl max-w-3xl mx-auto">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-background mb-xs">Saved</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your custom bowls and quick-add meals.</p>
+</div>
+<div class="flex gap-sm">
+<button class="h-10 px-4 rounded-full bg-surface-container-high text-on-surface font-label-lg text-label-lg flex items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filter
+                </button>
+</div>
+</div>
+<!-- Saved Bowls Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md" id="saved-bowls-container">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border border-surface-variant relative overflow-hidden group hover:active-shadow transition-shadow">
+<div class="flex justify-between items-start mb-md">
+<div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full mb-2">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Qdoba</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Post-Workout Bowl</h3>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Chicken, brown rice, black beans, fajita veggies, pico de gallo, and guacamole.</p>
+<div class="flex gap-2 mb-lg">
+<div class="bg-primary/10 text-primary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        45g Pro
+                    </div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        65g Carb
+                    </div>
+<div class="bg-tertiary-container/10 text-tertiary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        18g Fat
+                    </div>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-surface-variant">
+<div class="font-headline-md text-headline-md text-on-background">610 <span class="font-body-md text-body-md text-on-surface-variant">kcal</span></div>
+<button class="h-10 px-6 rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-opacity">Add to Diary</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border border-surface-variant relative overflow-hidden group hover:active-shadow transition-shadow">
+<div class="flex justify-between items-start mb-md">
+<div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full mb-2">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Turner Place</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Lean Brisket Plate</h3>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Smoked brisket (lean cut), double side of roasted green beans, no sauce.</p>
+<div class="flex gap-2 mb-lg">
+<div class="bg-primary/10 text-primary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        52g Pro
+                    </div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        12g Carb
+                    </div>
+<div class="bg-tertiary-container/10 text-tertiary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        24g Fat
+                    </div>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-surface-variant">
+<div class="font-headline-md text-headline-md text-on-background">480 <span class="font-body-md text-body-md text-on-surface-variant">kcal</span></div>
+<button class="h-10 px-6 rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-opacity">Add to Diary</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border border-surface-variant relative overflow-hidden group hover:active-shadow transition-shadow">
+<div class="flex justify-between items-start mb-md">
+<div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-full mb-2">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">local_cafe</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Deet's Place</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Morning Oatmeal</h3>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md line-clamp-2">Steel-cut oats with almonds, blueberries, and a scoop of whey protein.</p>
+<div class="flex gap-2 mb-lg">
+<div class="bg-primary/10 text-primary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        30g Pro
+                    </div>
+<div class="bg-secondary-container/30 text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        55g Carb
+                    </div>
+<div class="bg-tertiary-container/10 text-tertiary px-3 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        10g Fat
+                    </div>
+</div>
+<div class="flex justify-between items-center pt-md border-t border-surface-variant">
+<div class="font-headline-md text-headline-md text-on-background">430 <span class="font-body-md text-body-md text-on-surface-variant">kcal</span></div>
+<button class="h-10 px-6 rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-opacity">Add to Diary</button>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default, can be toggled via JS if needed) -->
+<div class="hidden flex flex-col items-center justify-center py-xl mt-xl bg-surface-container-low rounded-xl border border-dashed border-outline-variant" id="empty-state">
+<div class="w-20 h-20 bg-surface-variant rounded-full flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-[40px] text-outline">fastfood</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">No Saved Bowls Yet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-xs mb-lg">Build your favorite custom meals from on-campus dining halls and save them here for quick logging.</p>
+<button class="h-14 px-8 rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-2 hover:opacity-90 transition-opacity active-shadow">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                Create First Bowl
+            </button>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-container-margin bottom-28 w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center active-shadow hover:scale-105 transition-transform z-40 md:right-xl">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface dark:bg-surface-container-low shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-xl md:hidden">
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-colors rounded-xl">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-colors rounded-xl">
+<span class="material-symbols-outlined text-[24px]">search</span>
+<span class="font-label-md text-label-md mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="font-label-md text-label-md mt-1 font-bold">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 transition-colors rounded-xl">
+<span class="material-symbols-outlined text-[24px]">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</div>
+</nav>
+<!-- Desktop Navigation (Hidden on mobile) -->
+<div class="hidden md:flex fixed top-0 left-1/2 -translate-x-1/2 h-16 items-center gap-lg z-50">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Explore</a>
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary py-1" href="#">Saved</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#">Profile</a>
+</div>
+</body></html>

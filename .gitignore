@@ -1,0 +1,33 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Supabase
+backend/supabase/.branches
+backend/supabase/.temp
+
+# Scraper output
+backend/scraper/output/

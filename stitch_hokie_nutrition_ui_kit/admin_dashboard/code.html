@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hokie Nutrition - Admin Dashboard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#d3e4fe",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#3f0016",
+                    "on-primary-container": "#ff9eb2",
+                    "primary-container": "#8b1f41",
+                    "surface-dim": "#e9d5d7",
+                    "surface-tint": "#a63455",
+                    "on-secondary-container": "#662d00",
+                    "surface-bright": "#fff8f7",
+                    "secondary-container": "#ff8934",
+                    "secondary-fixed": "#ffdbc8",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "tertiary-container": "#3b4b60",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#f8e3e5",
+                    "surface": "#fff8f7",
+                    "on-secondary-fixed-variant": "#743400",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#dcbfc3",
+                    "inverse-primary": "#ffb1c0",
+                    "outline": "#897175",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#ffecee",
+                    "tertiary": "#243449",
+                    "background": "#fff8f7",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "on-surface": "#24191b",
+                    "primary-fixed-dim": "#ffb1c0",
+                    "secondary-fixed-dim": "#ffb68b",
+                    "primary-fixed": "#ffd9df",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#aabbd4",
+                    "surface-container-highest": "#f2dee0",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#f2dee0",
+                    "secondary": "#994700",
+                    "primary": "#6c012b",
+                    "on-secondary-fixed": "#321300",
+                    "on-background": "#24191b",
+                    "inverse-surface": "#3a2d2f",
+                    "surface-container": "#fee9eb",
+                    "surface-container-low": "#fff0f1",
+                    "on-surface-variant": "#564145",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#861b3e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "xl": "32px",
+                    "gutter": "12px",
+                    "container-margin": "16px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "30px", "fontWeight": "700"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-lg": ["13px", {"lineHeight": "18px", "fontWeight": "600"}],
+                    "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-card {
+                @apply bg-surface-container-lowest/80 backdrop-blur-xl border border-surface-variant/30 shadow-[0_4px_24px_rgba(0,0,0,0.03)];
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg text-body-lg antialiased min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar (Desktop Navigation Anchor) -->
+<header class="flex justify-between items-center px-container-margin h-16 w-full fixed top-0 z-50 bg-background/80 backdrop-blur-md border-b border-surface-variant/20 shadow-sm md:shadow-none">
+<div class="flex items-center gap-sm">
+<button class="md:hidden p-2 rounded-full hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg text-primary md:ml-2 tracking-tight">Hokie Nutrition</h1>
+</div>
+<!-- Desktop Navigation Cluster -->
+<nav class="hidden md:flex items-center gap-md">
+<a class="flex items-center gap-xs px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg transition-transform hover:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                Overview
+            </a>
+<a class="flex items-center gap-xs px-4 py-2 rounded-full text-on-surface-variant hover:bg-surface-variant/50 hover:text-on-surface font-label-lg text-label-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+                Explore Data
+            </a>
+<a class="flex items-center gap-xs px-4 py-2 rounded-full text-on-surface-variant hover:bg-surface-variant/50 hover:text-on-surface font-label-lg text-label-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+                Reports
+            </a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex p-2 rounded-full text-on-surface-variant hover:bg-surface-variant/50 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-label-lg text-label-lg overflow-hidden border border-outline-variant">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a young administrator in a brightly lit modern office setting, facing forward with a subtle smile. High-key lighting, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT85wBvsoMdZUj4B_ZBeMPTx_OD2j3p2G5oxy9IWYebPHi5qhoUeMTOu4Pt7nRykHrHU4bjnHtm2wj9KbDRNo9dQJkrDT2O_V8lBhzGUsq9mU3h3Uhj9UqTHo-NTXpl6qTOnERQcJ5s9qXy-hcDpwnLF2SuoLYaLpbKzeSCAAa1L3sX8bx-8SzzYATB30jISvt_SE-tTiGxsCISKORBMmK1Q_Zq5pDvqjfHBzMqv99k6B6kpjp8-xqv0n8-GzFRG1p0ZKk1zPYlIOZ"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-container-margin md:px-xl max-w-[1440px] mx-auto w-full flex flex-col gap-xl">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-4">
+<div>
+<p class="font-label-lg text-label-lg text-secondary uppercase tracking-wider mb-1">Admin Control</p>
+<h2 class="font-display-lg text-display-lg text-on-background">Analytics Overview</h2>
+</div>
+<div class="flex gap-sm">
+<button class="px-4 py-2 rounded-lg bg-surface border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    Last 30 Days
+                </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 shadow-[0_4px_12px_rgba(108,1,43,0.2)] transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export
+                </button>
+</div>
+</div>
+<!-- Bento Grid: KPIs -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md md:gap-lg">
+<!-- KPI 1 -->
+<div class="glass-card rounded-xl p-lg relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-fixed-dim/20 rounded-full blur-2xl group-hover:bg-primary-fixed-dim/30 transition-colors duration-500"></div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<span class="bg-secondary-fixed/50 text-on-secondary-container px-2 py-1 rounded-md font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 8.4%
+                    </span>
+</div>
+<div class="relative z-10">
+<h3 class="font-body-md text-body-md text-on-surface-variant mb-1">Total Registered Users</h3>
+<p class="font-display-lg text-display-lg text-on-surface tracking-tight">14,205</p>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="glass-card rounded-xl p-lg relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-fixed-dim/20 rounded-full blur-2xl group-hover:bg-secondary-fixed-dim/30 transition-colors duration-500"></div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="bg-secondary-fixed/50 text-on-secondary-container px-2 py-1 rounded-md font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 12.1%
+                    </span>
+</div>
+<div class="relative z-10">
+<h3 class="font-body-md text-body-md text-on-surface-variant mb-1">Active Users (Weekly)</h3>
+<p class="font-display-lg text-display-lg text-on-surface tracking-tight">8,432</p>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="glass-card rounded-xl p-lg relative overflow-hidden group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-md">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface-variant mb-2">Top Dining Halls</h3>
+</div>
+<div class="flex flex-col gap-2 mt-auto">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">D2 at Dietrick</span>
+<span class="font-body-md text-body-md text-on-surface-variant">42%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 42%"></div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-lg text-label-lg text-on-surface">West End Market</span>
+<span class="font-body-md text-body-md text-on-surface-variant">28%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 28%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Charts Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-md md:gap-lg">
+<!-- Line Chart: Onboarding Completion -->
+<div class="glass-card rounded-xl p-lg flex flex-col h-[400px]">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Onboarding Completion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Percentage of users completing setup</p>
+</div>
+<div class="px-3 py-1 bg-surface-variant rounded-full text-on-surface-variant font-label-md text-label-md flex items-center gap-1 cursor-pointer hover:bg-outline-variant transition-colors">
+                        Weekly <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+<div class="flex-grow relative w-full h-full mt-4">
+<!-- SVG Line Chart Mockup -->
+<svg class="w-full h-full absolute inset-0 overflow-visible" preserveaspectratio="none" viewbox="0 0 500 200">
+<defs>
+<lineargradient id="lineGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#6c012b" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#6c012b" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#f2dee0" stroke-dasharray="4" stroke-width="1" x1="0" x2="500" y1="50" y2="50"></line>
+<line stroke="#f2dee0" stroke-dasharray="4" stroke-width="1" x1="0" x2="500" y1="100" y2="100"></line>
+<line stroke="#f2dee0" stroke-dasharray="4" stroke-width="1" x1="0" x2="500" y1="150" y2="150"></line>
+<line stroke="#897175" stroke-width="1" x1="0" x2="500" y1="200" y2="200"></line>
+<!-- Area -->
+<path d="M0,180 C50,150 100,160 150,120 C200,80 250,90 300,50 C350,10 400,40 450,20 L500,10 L500,200 L0,200 Z" fill="url(#lineGrad)"></path>
+<!-- Line -->
+<path class="drop-shadow-md" d="M0,180 C50,150 100,160 150,120 C200,80 250,90 300,50 C350,10 400,40 450,20 L500,10" fill="none" stroke="#6c012b" stroke-linecap="round" stroke-width="4"></path>
+<!-- Data Points -->
+<circle cx="150" cy="120" fill="#ffffff" r="4" stroke="#6c012b" stroke-width="2"></circle>
+<circle cx="300" cy="50" fill="#ffffff" r="4" stroke="#6c012b" stroke-width="2"></circle>
+<circle cx="450" cy="20" fill="#6c012b" r="6" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Labels -->
+<div class="absolute bottom-0 left-0 w-full flex justify-between transform translate-y-6 text-on-surface-variant font-label-md text-label-md">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Bar Chart: Macro Tracking Activity -->
+<div class="glass-card rounded-xl p-lg flex flex-col h-[400px]">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Macro Tracking Activity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Meals logged per day</p>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-variant text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex-grow relative w-full h-full mt-4 flex items-end justify-between px-2">
+<!-- SVG Bar Chart Mockup elements constructed with HTML/CSS for responsive easing -->
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-fixed rounded-t-sm h-[40%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">M</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-container rounded-t-sm h-[65%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-container rounded-t-sm h-[80%] group-hover:bg-secondary transition-colors relative">
+<!-- Tooltip mock -->
+<div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none">
+                                4,201 logs
+                            </div>
+</div>
+<span class="mt-4 font-label-md text-label-md text-on-surface">W</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-fixed rounded-t-sm h-[50%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">T</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-container rounded-t-sm h-[70%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">F</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-fixed rounded-t-sm h-[30%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">S</span>
+</div>
+<div class="flex flex-col items-center w-[10%] group">
+<div class="w-full bg-secondary-fixed rounded-t-sm h-[20%] group-hover:bg-secondary transition-colors relative"></div>
+<span class="mt-4 font-label-md text-label-md text-on-surface-variant">S</span>
+</div>
+<!-- Y Axis Lines -->
+<div class="absolute inset-0 pointer-events-none pb-8 flex flex-col justify-between border-b border-outline-variant/30">
+<div class="w-full border-t border-outline-variant/20 border-dashed"></div>
+<div class="w-full border-t border-outline-variant/20 border-dashed"></div>
+<div class="w-full border-t border-outline-variant/20 border-dashed"></div>
+<div class="w-full border-t border-outline-variant/20 border-dashed"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only Navigation Shell) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-surface dark:bg-surface-container-low shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-on-primary-container dark:text-on-primary-container rounded-2xl px-4 py-1 Active: scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined font-headline-md text-headline-md" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 rounded-2xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined font-headline-md text-headline-md">search</span>
+<span class="font-label-md text-label-md mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 rounded-2xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined font-headline-md text-headline-md">bookmark</span>
+<span class="font-label-md text-label-md mt-1">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant/50 rounded-2xl transition-all duration-200" href="#">
+<span class="material-symbols-outlined font-headline-md text-headline-md">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
