@@ -109,7 +109,7 @@ struct OnboardingFlowView: View {
 
             Button("Continue") {
                 appState.profile.targets = targets
-                appState.completeOnboarding()
+                Task { await appState.completeOnboarding() }
             }
             .buttonStyle(HokiePrimaryButtonStyle())
         }

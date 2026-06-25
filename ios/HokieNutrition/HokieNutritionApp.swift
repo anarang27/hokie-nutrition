@@ -8,6 +8,7 @@ struct HokieNutritionApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(appState)
+                .task { await appState.bootstrap() }
         }
     }
 }
@@ -17,8 +18,10 @@ struct RootView: View {
 
     var body: some View {
         Group {
-            if !appState.isAuthenticated {
-                OnboardingAccountView()
+            if appState.isBootstrapping {
+                LoadingView()
+            } else if !appState.isAuthenticated {
+                AuthView()
             } else if !appState.hasCompletedOnboarding {
                 OnboardingFlowView()
             } else if !appState.hasLocationPermission && appState.selectedQuadrant == nil {
@@ -28,5 +31,16 @@ struct RootView: View {
             }
         }
         .background(HokieColors.background.ignoresSafeArea())
+    }
+}
+
+struct LoadingView: View {
+    var body: some View {
+        VStack(spacing: 16) {
+            ProgressView()
+                .tint(HokieColors.primary)
+            Text("Loading Hokie Nutrition...")
+                .foregroundStyle(HokieColors.onSurfaceVariant)
+        }
     }
 }

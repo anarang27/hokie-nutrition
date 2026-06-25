@@ -1,9 +1,12 @@
+import { writeFileSync, mkdirSync } from "node:fs";
+import { join } from "node:path";
 import "dotenv/config";
 import { createClient } from "@supabase/supabase-js";
 import { VENUES, menuAtLocationUrl, formatFoodProDate } from "./config.js";
 import { parseLocationPage, parseLabelPage, splitRecAndPort } from "./parseFoodPro.js";
 
 const dryRun = process.argv.includes("--dry-run");
+const localOnly = process.argv.includes("--local");
 const delayMs = 300;
 
 function sleep(ms: number) {
@@ -19,7 +22,6 @@ async function fetchHtml(url: string): Promise<string> {
 }
 
 function parseMenuDate(s: string): string {
-  // FoodPro uses M/D/YYYY or MM/DD/YYYY -> normalize to ISO date
   const parts = s.split("/");
   if (parts.length === 3) {
     const [m, d, y] = parts.map((p) => parseInt(p, 10));
@@ -28,14 +30,40 @@ function parseMenuDate(s: string): string {
   return new Date().toISOString().slice(0, 10);
 }
 
+interface ScrapedRow {
+  venue_slug: string;
+  venue_name: string;
+  restaurant_name: string;
+  foodpro_rec_num: string;
+  foodpro_portion: string;
+  name: string;
+  description?: string;
+  meal: string;
+  serving_size?: string;
+  calories?: number;
+  protein_g?: number;
+  carbs_g?: number;
+  fat_g?: number;
+  fiber_g?: number;
+  ingredients?: string;
+  allergens: string[];
+  menu_date: string;
+  label_url: string;
+}
+
 async function main() {
   const today = new Date();
   const menuDateIso = parseMenuDate(formatFoodProDate(today));
-  console.log(`Scraping FoodPro menus for ${menuDateIso}${dryRun ? " (dry run)" : ""}...`);
+  const mode = dryRun ? "dry run" : localOnly ? "local export" : "supabase";
+  console.log(`Scraping FoodPro menus for ${menuDateIso} (${mode})...`);
 
-  const supabase = dryRun
+  const supabase = dryRun || localOnly
     ? null
     : createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+
+  if (!supabase && !dryRun && !localOnly) {
+    throw new Error("Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in backend/.env, or use --local");
+  }
 
   let scrapeRunId: string | undefined;
   if (supabase) {
@@ -50,7 +78,7 @@ async function main() {
 
   let venuesSucceeded = 0;
   let itemsIngested = 0;
-  const output: unknown[] = [];
+  const localRows: ScrapedRow[] = [];
 
   for (const venue of VENUES) {
     const url = menuAtLocationUrl(venue.foodproLocationNum, today);
@@ -68,7 +96,6 @@ async function main() {
 
       venuesSucceeded++;
 
-      // Upsert venue
       let venueId: string | undefined;
       if (supabase) {
         const { data: venueRow } = await supabase
@@ -85,8 +112,9 @@ async function main() {
       }
 
       const restaurantCache = new Map<string, string>();
+      const itemLimit = dryRun ? 5 : undefined;
 
-      for (const item of parsed.items.slice(0, dryRun ? 5 : undefined)) {
+      for (const item of parsed.items.slice(0, itemLimit)) {
         await sleep(delayMs);
 
         let label;
@@ -95,12 +123,13 @@ async function main() {
           label = parseLabelPage(labelHtml);
         } catch (err) {
           console.warn(`  ⚠ Could not fetch label for ${item.name}: ${err}`);
-          label = { name: item.name, allergens: [] as string[] };
+          label = { name: "", allergens: [] as string[] };
         }
 
         const { recNum, portion } = splitRecAndPort(item.recNumAndPort);
-        const row = {
+        const row: ScrapedRow = {
           venue_slug: venue.slug,
+          venue_name: parsed.venueName || venue.name,
           restaurant_name: item.restaurantName,
           foodpro_rec_num: recNum,
           foodpro_portion: portion,
@@ -120,14 +149,19 @@ async function main() {
         };
 
         if (dryRun) {
-          output.push(row);
+          localRows.push(row);
+          itemsIngested++;
+          continue;
+        }
+
+        if (localOnly) {
+          localRows.push(row);
           itemsIngested++;
           continue;
         }
 
         if (!supabase || !venueId) continue;
 
-        // Upsert restaurant
         let restaurantId = restaurantCache.get(item.restaurantName);
         if (!restaurantId) {
           const slug = item.restaurantName.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -168,8 +202,15 @@ async function main() {
     }
   }
 
-  if (dryRun) {
-    console.log("\nSample output:", JSON.stringify(output.slice(0, 3), null, 2));
+  if (localRows.length > 0) {
+    const outDir = join(process.cwd(), "scraper/output");
+    mkdirSync(outDir, { recursive: true });
+    const outPath = join(outDir, `menu-${menuDateIso}.json`);
+    writeFileSync(outPath, JSON.stringify(localRows, null, 2));
+    console.log(`\nWrote ${localRows.length} items to ${outPath}`);
+    if (dryRun) {
+      console.log("Sample:", JSON.stringify(localRows.slice(0, 2), null, 2));
+    }
   }
 
   if (supabase && scrapeRunId) {
