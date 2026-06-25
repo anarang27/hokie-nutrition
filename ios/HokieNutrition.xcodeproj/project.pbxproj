@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06EE6588DC1422C9AD350976 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32393E529BADA63185E16E23 /* ProfileRepository.swift */; };
 		0814CD7B0E91C474885AA7DE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730E199CDD18119EB4F53A5 /* Models.swift */; };
+		10FA1D4AEE315DFBADADCB70 /* Supabase.plist.example in Resources */ = {isa = PBXBuildFile; fileRef = 9D3583F82FFDE254A47B9014 /* Supabase.plist.example */; };
 		128A8B59E7851EA7582C3879 /* LocationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D2416876F742F8CBEF6B5 /* LocationPermissionView.swift */; };
 		19BC32408BB3B6A115047482 /* HokieTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1B1689122A88D661036871 /* HokieTheme.swift */; };
 		22E1FEF58CA1A9CECF06E79E /* HokieNutritionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */; };
 		2A75EB300288C4A7AF2F163F /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */; };
 		38EC6F2C5EF446AB599B4662 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4829D9D0E989B692E6BAB840 /* AppState.swift */; };
+		4B1F4A525447E58733D3AC9F /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C107DE450C7A8A8F7029A7 /* MenuRepository.swift */; };
 		548B79BD39997FED376C6841 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848496BF5693FEB62EEDAC68 /* HomeView.swift */; };
 		63C2A94FC251AB19B1215295 /* HokieNutritionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19BD4FFD409EEDDFA8318C5 /* HokieNutritionTests.swift */; };
 		841298D0965CD02B57D21C63 /* NutritionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */; };
 		93C668E7A0E75474EF657BB7 /* OnboardingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */; };
 		9D1E98DC58CB7539A3E7D9E5 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F5F753EB8ED39906CF1B1 /* ExploreView.swift */; };
+		9F5DD955D3FBE4B773E87359 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 18F4AFDD851ED5E06E28278F /* Supabase */; };
+		A4C2AF4B3E7E08BD246393D1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4195814D73F7FEDCB2894E55 /* AuthService.swift */; };
 		B555B1E93D4EB495C4FB5666 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E41AF674EB955F34D4507 /* MealDetailView.swift */; };
 		BA0C97E4B307DDFDD47CB62A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7BC8545321937260CC3F5A /* MainTabView.swift */; };
+		BA98F7C9BBDAA95F27BEC4ED /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36434A0B5E4A9D915763788B /* SupabaseConfig.swift */; };
 		C4C96E215712BB82DB6B3A7E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F229BBD6FCBB2755411912 /* ProfileView.swift */; };
 		D68C64777B41846AACE9F40B /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011B6239980165DCBE630949 /* OnboardingFlowView.swift */; };
+		FF24B17ED538C68E15872BC6 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AB251B60AACD091A5C27C7 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,21 +45,38 @@
 		011B6239980165DCBE630949 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
 		043D2416876F742F8CBEF6B5 /* LocationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionView.swift; sourceTree = "<group>"; };
 		06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationEngine.swift; sourceTree = "<group>"; };
+		12C107DE450C7A8A8F7029A7 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
 		2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieNutritionApp.swift; sourceTree = "<group>"; };
 		253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionCalculator.swift; sourceTree = "<group>"; };
 		2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAccountView.swift; sourceTree = "<group>"; };
+		32393E529BADA63185E16E23 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		36434A0B5E4A9D915763788B /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		385E41AF674EB955F34D4507 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		38D7B81AC551DBC8BA12AA77 /* HokieNutritionTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HokieNutritionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4195814D73F7FEDCB2894E55 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		42F229BBD6FCBB2755411912 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4829D9D0E989B692E6BAB840 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		6730E199CDD18119EB4F53A5 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		6E7BC8545321937260CC3F5A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		848496BF5693FEB62EEDAC68 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8A2F5F753EB8ED39906CF1B1 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		9D3583F82FFDE254A47B9014 /* Supabase.plist.example */ = {isa = PBXFileReference; path = Supabase.plist.example; sourceTree = "<group>"; };
 		C19BD4FFD409EEDDFA8318C5 /* HokieNutritionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieNutritionTests.swift; sourceTree = "<group>"; };
+		C1AB251B60AACD091A5C27C7 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		CF450D9A734755F6E868129B /* HokieNutrition.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HokieNutrition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1B1689122A88D661036871 /* HokieTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HokieTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94A5359A25CA192CAAD7C5F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F5DD955D3FBE4B773E87359 /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0CFA7EA908597FE121DACDD7 /* Theme */ = {
@@ -116,8 +140,12 @@
 		93339896067696F6D80B891E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4195814D73F7FEDCB2894E55 /* AuthService.swift */,
+				12C107DE450C7A8A8F7029A7 /* MenuRepository.swift */,
 				253BD5FDCED10D20A90EF952 /* NutritionCalculator.swift */,
+				32393E529BADA63185E16E23 /* ProfileRepository.swift */,
 				06F14CF3084F3C6C8DFF21BD /* RecommendationEngine.swift */,
+				36434A0B5E4A9D915763788B /* SupabaseConfig.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -150,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2474C54DB545727E645D6DE9 /* HokieNutritionApp.swift */,
+				9D3583F82FFDE254A47B9014 /* Supabase.plist.example */,
 				3C2525C89C593C80D0E449C0 /* App */,
 				DA5714F2A4DEC9B9C0F49DE8 /* Models */,
 				93339896067696F6D80B891E /* Services */,
@@ -176,6 +205,7 @@
 		D9EBF6BECECD6171A64499C3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				C1AB251B60AACD091A5C27C7 /* AuthView.swift */,
 				2F111FB3A588D27A38FB183C /* OnboardingAccountView.swift */,
 				011B6239980165DCBE630949 /* OnboardingFlowView.swift */,
 			);
@@ -216,6 +246,8 @@
 			buildConfigurationList = DF12BAD4C5AD58A5C41A4348 /* Build configuration list for PBXNativeTarget "HokieNutrition" */;
 			buildPhases = (
 				3C51B5A4F909C5D1D9D77741 /* Sources */,
+				9703E7D63ED519878BFAA2DB /* Resources */,
+				94A5359A25CA192CAAD7C5F9 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +255,7 @@
 			);
 			name = HokieNutrition;
 			packageProductDependencies = (
+				18F4AFDD851ED5E06E28278F /* Supabase */,
 			);
 			productName = HokieNutrition;
 			productReference = CF450D9A734755F6E868129B /* HokieNutrition.app */;
@@ -251,6 +284,9 @@
 			);
 			mainGroup = 693523F88140306E6F7E9C99;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				43C514B56CE40B6B5E7C92F6 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8D2D4C71E1F9E2098EC04C76 /* Products */;
 			projectDirPath = "";
@@ -262,12 +298,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		9703E7D63ED519878BFAA2DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FA1D4AEE315DFBADADCB70 /* Supabase.plist.example in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C51B5A4F909C5D1D9D77741 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38EC6F2C5EF446AB599B4662 /* AppState.swift in Sources */,
+				A4C2AF4B3E7E08BD246393D1 /* AuthService.swift in Sources */,
+				FF24B17ED538C68E15872BC6 /* AuthView.swift in Sources */,
 				9D1E98DC58CB7539A3E7D9E5 /* ExploreView.swift in Sources */,
 				22E1FEF58CA1A9CECF06E79E /* HokieNutritionApp.swift in Sources */,
 				19BC32408BB3B6A115047482 /* HokieTheme.swift in Sources */,
@@ -275,12 +324,15 @@
 				128A8B59E7851EA7582C3879 /* LocationPermissionView.swift in Sources */,
 				BA0C97E4B307DDFDD47CB62A /* MainTabView.swift in Sources */,
 				B555B1E93D4EB495C4FB5666 /* MealDetailView.swift in Sources */,
+				4B1F4A525447E58733D3AC9F /* MenuRepository.swift in Sources */,
 				0814CD7B0E91C474885AA7DE /* Models.swift in Sources */,
 				841298D0965CD02B57D21C63 /* NutritionCalculator.swift in Sources */,
 				93C668E7A0E75474EF657BB7 /* OnboardingAccountView.swift in Sources */,
 				D68C64777B41846AACE9F40B /* OnboardingFlowView.swift in Sources */,
+				06EE6588DC1422C9AD350976 /* ProfileRepository.swift in Sources */,
 				C4C96E215712BB82DB6B3A7E /* ProfileView.swift in Sources */,
 				2A75EB300288C4A7AF2F163F /* RecommendationEngine.swift in Sources */,
+				BA98F7C9BBDAA95F27BEC4ED /* SupabaseConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +581,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		43C514B56CE40B6B5E7C92F6 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18F4AFDD851ED5E06E28278F /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 43C514B56CE40B6B5E7C92F6 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6520035C56ED44B16E11062F /* Project object */;
 }

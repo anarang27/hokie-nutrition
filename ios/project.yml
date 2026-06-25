@@ -6,12 +6,19 @@ options:
   xcodeVersion: "15.0"
 settings:
   SWIFT_VERSION: "5.9"
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: 2.0.0
 targets:
   HokieNutrition:
     type: application
     platform: iOS
     sources:
       - path: HokieNutrition
+    dependencies:
+      - package: Supabase
+        product: Supabase
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: edu.vt.hokienutrition
       GENERATE_INFOPLIST_FILE: YES

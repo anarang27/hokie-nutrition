@@ -20,6 +20,9 @@ dist/
 .env
 .env.local
 
+# iOS secrets
+ios/HokieNutrition/Supabase.plist
+
 # Python
 __pycache__/
 *.pyc

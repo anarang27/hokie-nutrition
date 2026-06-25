@@ -45,8 +45,7 @@ struct ProfileView: View {
                     }
 
                     Button("Sign Out") {
-                        appState.isAuthenticated = false
-                        appState.hasCompletedOnboarding = false
+                        Task { await appState.signOut() }
                     }
                     .buttonStyle(HokieSecondaryButtonStyle())
                 }

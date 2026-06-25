@@ -5,6 +5,8 @@
   "scripts": {
     "scrape": "tsx scraper/src/index.ts",
     "scrape:dry": "tsx scraper/src/index.ts --dry-run",
+    "scrape:local": "tsx scraper/src/index.ts --local",
+    "discover:venues": "tsx scraper/src/discoverVenues.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
